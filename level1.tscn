@@ -1,17 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://ci0oflngiymbc"]
+[gd_scene load_steps=5 format=3 uid="uid://ci0oflngiymbc"]
 
 [ext_resource type="Texture2D" uid="uid://c0yvqo62mdn1" path="res://UI/level1.png" id="1_7fyrc"]
+[ext_resource type="PackedScene" uid="uid://vua825pr3fsj" path="res://nagel.tscn" id="2_fnhkw"]
 [ext_resource type="PackedScene" uid="uid://d4bohhn7dd7wq" path="res://hand.tscn" id="2_l44ch"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dwnrj"]
+normal = Vector2(0.005, -0.99)
 
 [node name="Level1" type="Node2D"]
 
 [node name="Hand2" parent="." instance=ExtResource("2_l44ch")]
 modulate = Color(1, 0, 0, 1)
-position = Vector2(531.779, 56.036)
+position = Vector2(969, 360)
 player = "P2"
 
 [node name="Hand" parent="." instance=ExtResource("2_l44ch")]
 modulate = Color(0, 0, 1, 1)
+position = Vector2(276, 359)
+scale = Vector2(-1, 1)
+
+[node name="Nagel" parent="." instance=ExtResource("2_fnhkw")]
+position = Vector2(133, 125)
+disable_mode = 2
 
 [node name="Node" type="Node" parent="."]
 
@@ -24,3 +34,18 @@ texture_repeat = 2
 scale = Vector2(0.901389, 0.901389)
 texture = ExtResource("1_7fyrc")
 centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+position = Vector2(674, 4)
+disable_mode = 2
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+light_mask = 2
+visibility_layer = 2
+y_sort_enabled = true
+position = Vector2(-492, 649)
+shape = SubResource("WorldBoundaryShape2D_dwnrj")
+disabled = true

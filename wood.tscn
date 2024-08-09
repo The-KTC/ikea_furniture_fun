@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://08myf1y7t4mk"]
+
+[ext_resource type="PackedScene" uid="uid://kb62dt0xx8qy" path="res://items.tscn" id="1_8japv"]
+[ext_resource type="Texture2D" uid="uid://uyhrm2k6vhlv" path="res://UI/wood.png" id="1_h7dpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6so2"]
+size = Vector2(255, 64)
+
+[node name="Wood" instance=ExtResource("1_8japv")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("1_h7dpe")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0.5, 1)
+rotation = -0.015708
+shape = SubResource("RectangleShape2D_y6so2")
