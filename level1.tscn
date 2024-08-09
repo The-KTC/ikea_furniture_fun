@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci0oflngiymbc"]
+
+[ext_resource type="Texture2D" uid="uid://c0yvqo62mdn1" path="res://UI/level1.png" id="1_7fyrc"]
+[ext_resource type="PackedScene" uid="uid://d4bohhn7dd7wq" path="res://hand.tscn" id="2_l44ch"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Hand2" parent="." instance=ExtResource("2_l44ch")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(531.779, 56.036)
+player = "P2"
+
+[node name="Hand" parent="." instance=ExtResource("2_l44ch")]
+modulate = Color(0, 0, 1, 1)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node"]
+light_mask = 16
+visibility_layer = 16
+z_index = -1
+texture_filter = 2
+texture_repeat = 2
+scale = Vector2(0.901389, 0.901389)
+texture = ExtResource("1_7fyrc")
+centered = false
