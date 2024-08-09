@@ -16,11 +16,11 @@ player = "P2"
 
 [node name="Hand" parent="." instance=ExtResource("2_l44ch")]
 modulate = Color(0, 0, 1, 1)
-position = Vector2(276, 359)
+position = Vector2(11, 11)
 scale = Vector2(-1, 1)
 
 [node name="Nagel" parent="." instance=ExtResource("2_fnhkw")]
-position = Vector2(133, 125)
+position = Vector2(449, 77)
 disable_mode = 2
 
 [node name="Node" type="Node" parent="."]
@@ -48,4 +48,3 @@ visibility_layer = 2
 y_sort_enabled = true
 position = Vector2(-492, 649)
 shape = SubResource("WorldBoundaryShape2D_dwnrj")
-disabled = true

@@ -12,6 +12,11 @@ func _process(delta):
 	# x-achse wird verringert
 	pass
 
-func setGravity(boolean):
-	self.gravity = boolean
+func InHand():
+	self.gravity_scale = 0
+	self.position.x = 0
+	print("Gravity switched?")
+
+func OutHand():
+	self.gravity_scale = 1
 	print("Gravity switched?")
