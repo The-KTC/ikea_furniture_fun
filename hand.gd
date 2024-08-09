@@ -1,17 +1,14 @@
 extends Node
+@export var player = "P1"
 var speed = 10
 var velocity = Vector2.ZERO
-@export var player = "P1"
-
-var inHand = null
-var HandOffset = Vector2.ZERO
-
-func _ready():
-	print("loaded, test")
+var inHand = null # werkzeug
+var hatInHand = false
 
 func _process(delta):
 	self.position += velocity * speed
-
+	if hatInHand:
+		inHand.position = self.position
 
 func _input(event):
 	if event.is_action_pressed(player+"-Up"):
@@ -35,13 +32,9 @@ func _input(event):
 	if event.is_action_pressed(player+"-Auf-UndAblegen") && get_node("Area2D").get_overlapping_bodies().size()>0 && inHand == null:
 		inHand = get_node("Area2D").get_overlapping_bodies()[0]
 		inHand.InHand()
-		HandOffset = self.global_position - inHand.global_position
-		inHand.get_parent().remove_child(inHand)
-		self.add_child(inHand)
+		hatInHand = true
+
 	elif event.is_action_pressed(player+"-Auf-UndAblegen") && inHand != null:
-		self.remove_child(inHand)
-		get_parent().add_child(inHand)
-		inHand.OutHand()
+		inHand.OutHand(self.position)
 		inHand = null
-
-
+		hatInHand = false
