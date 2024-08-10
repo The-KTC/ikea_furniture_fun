@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjmsaeiwc0xwa"]
+
+[ext_resource type="PackedScene" uid="uid://kb62dt0xx8qy" path="res://items.tscn" id="1_btg3q"]
+[ext_resource type="Texture2D" uid="uid://c8q7fqh15w5hy" path="res://sprites/DickesBrett.png" id="2_egft3"]
+
+[node name="bretieBrett2" instance=ExtResource("1_btg3q")]
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_egft3")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.5)

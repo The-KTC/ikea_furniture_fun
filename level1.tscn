@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://vua825pr3fsj" path="res://nagel.tscn" id="2_fnhkw"]
 [ext_resource type="PackedScene" uid="uid://d4bohhn7dd7wq" path="res://hand.tscn" id="2_l44ch"]
 [ext_resource type="PackedScene" uid="uid://08myf1y7t4mk" path="res://wood.tscn" id="4_mbipq"]
-[ext_resource type="PackedScene" uid="uid://c6uot5fjakyq" path="res://langesBrett.tscn" id="5_db2u1"]
-[ext_resource type="PackedScene" uid="uid://dt6y4i0qvsmfb" path="res://breitesbrett.tscn" id="6_82jt7"]
+[ext_resource type="PackedScene" uid="uid://cjmsaeiwc0xwa" path="res://bretie_brett_2.tscn" id="6_ytwb3"]
+[ext_resource type="PackedScene" uid="uid://dg7hgmofu7a1a" path="res://langes_brett_2.tscn" id="7_ppu6g"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dwnrj"]
 normal = Vector2(0.005, -0.99)
@@ -54,10 +54,8 @@ shape = SubResource("WorldBoundaryShape2D_dwnrj")
 position = Vector2(728, -297)
 collision_layer = 3
 
-[node name="Items" parent="." instance=ExtResource("5_db2u1")]
-position = Vector2(500, -103)
-collision_mask = 1
+[node name="langesBrett2" parent="." instance=ExtResource("7_ppu6g")]
+position = Vector2(521, 483)
 
-[node name="breitesbrett" parent="." instance=ExtResource("6_82jt7")]
-position = Vector2(606, -528)
-collision_mask = 1
+[node name="bretieBrett2" parent="." instance=ExtResource("6_ytwb3")]
+position = Vector2(505, 70)

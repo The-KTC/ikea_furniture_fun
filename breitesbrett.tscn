@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt6y4i0qvsmfb"]
+[gd_scene load_steps=4 format=3 uid="uid://dt6y4i0qvsmfb"]
 
 [ext_resource type="PackedScene" uid="uid://kb62dt0xx8qy" path="res://items.tscn" id="1_3nfak"]
 [ext_resource type="Texture2D" uid="uid://c8q7fqh15w5hy" path="res://sprites/DickesBrett.png" id="2_xjmjk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kuo6c"]
+size = Vector2(300, 200)
 
 [node name="breitesbrett" instance=ExtResource("1_3nfak")]
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_xjmjk")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_kuo6c")

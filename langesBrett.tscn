@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugy5u"]
 size = Vector2(500, 100)
 
-[node name="Items" instance=ExtResource("1_tcifl")]
+[node name="langesBrett" instance=ExtResource("1_tcifl")]
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(0.4, 0.4)
