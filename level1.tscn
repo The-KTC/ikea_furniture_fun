@@ -51,7 +51,7 @@ position = Vector2(610, 892)
 rotation = 1.58149
 
 [node name="bretieBrett2" parent="." instance=ExtResource("6_ytwb3")]
-position = Vector2(505, 70)
+position = Vector2(1413, 282)
 
 [node name="bretieBrett3" parent="." instance=ExtResource("6_ytwb3")]
 position = Vector2(376, -217)
@@ -67,7 +67,7 @@ position = Vector2(136, 1298)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(-142, -71)
-rotation = -1.5708
+rotation = -4.71239
 shape = SubResource("WorldBoundaryShape2D_yr3i8")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
@@ -75,7 +75,15 @@ position = Vector2(2452, 1252)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 position = Vector2(-142, -71)
-rotation = -15.708
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_yr3i8")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(2452, 1252)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(-236, -1250)
+rotation = -3.14159
 shape = SubResource("WorldBoundaryShape2D_yr3i8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
