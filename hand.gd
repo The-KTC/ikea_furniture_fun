@@ -34,7 +34,7 @@ func _input(event):
 	if event.is_action_released(player+"-Right"):
 		velocity+=Vector2(-1,0)
 		
-	if event.is_action_pressed(player+"-Auf-UndAblegen") && get_node("Area2D").get_overlapping_bodies().size()>0 && inHand == null:
+	if event.is_action_pressed(player+"-Auf-UndAblegen") && get_node("Area2D").get_overlapping_bodies().size()>0 && inHand == null && !get_node("Area2D").get_overlapping_bodies()[0].inHand :
 		inHand = get_node("Area2D").get_overlapping_bodies()[0]
 		inHand.InHand()
 		hatInHand = true

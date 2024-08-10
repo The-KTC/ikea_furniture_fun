@@ -7,11 +7,13 @@
 size = Vector2(750, 251)
 
 [node name="Wood" instance=ExtResource("1_8japv")]
+collision_mask = 3
 
 [node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_6yler")
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(-2.38419e-07, -0.5)
-scale = Vector2(1, 1)
+scale = Vector2(0.4, 0.4)
 shape = SubResource("RectangleShape2D_y6so2")

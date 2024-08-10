@@ -5,10 +5,14 @@
 
 [node name="Nagel" type="RigidBody2D"]
 collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_bdec0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 2
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_d1rh8")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.2, 0.2)
 polygon = PackedVector2Array(-125, 119, -25, -60, -25, -121, 26, -125, 124, -48, 119, -6, 54, 8)

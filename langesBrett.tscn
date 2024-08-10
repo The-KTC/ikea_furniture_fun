@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6uot5fjakyq"]
+
+[ext_resource type="PackedScene" uid="uid://kb62dt0xx8qy" path="res://items.tscn" id="1_tcifl"]
+[ext_resource type="Texture2D" uid="uid://bfaox0vt7g432" path="res://sprites/langesBrett.png" id="2_uxdps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugy5u"]
+size = Vector2(500, 100)
+
+[node name="Items" instance=ExtResource("1_tcifl")]
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_uxdps")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_ugy5u")

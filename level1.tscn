@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ci0oflngiymbc"]
+[gd_scene load_steps=8 format=3 uid="uid://ci0oflngiymbc"]
 
 [ext_resource type="Texture2D" uid="uid://c0yvqo62mdn1" path="res://UI/level1.png" id="1_7fyrc"]
 [ext_resource type="PackedScene" uid="uid://vua825pr3fsj" path="res://nagel.tscn" id="2_fnhkw"]
 [ext_resource type="PackedScene" uid="uid://d4bohhn7dd7wq" path="res://hand.tscn" id="2_l44ch"]
 [ext_resource type="PackedScene" uid="uid://08myf1y7t4mk" path="res://wood.tscn" id="4_mbipq"]
+[ext_resource type="PackedScene" uid="uid://c6uot5fjakyq" path="res://langesBrett.tscn" id="5_db2u1"]
+[ext_resource type="PackedScene" uid="uid://dt6y4i0qvsmfb" path="res://breitesbrett.tscn" id="6_82jt7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dwnrj"]
 normal = Vector2(0.005, -0.99)
@@ -51,4 +53,11 @@ shape = SubResource("WorldBoundaryShape2D_dwnrj")
 [node name="Wood" parent="." instance=ExtResource("4_mbipq")]
 position = Vector2(728, -297)
 collision_layer = 3
-collision_mask = 3
+
+[node name="Items" parent="." instance=ExtResource("5_db2u1")]
+position = Vector2(500, -103)
+collision_mask = 1
+
+[node name="breitesbrett" parent="." instance=ExtResource("6_82jt7")]
+position = Vector2(606, -528)
+collision_mask = 1
