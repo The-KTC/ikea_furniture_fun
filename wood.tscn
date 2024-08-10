@@ -4,16 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://dbl3x6nfvax4t" path="res://sprites/Brett.png" id="2_6yler"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6so2"]
-size = Vector2(750, 251)
+size = Vector2(750, 249.25)
 
 [node name="Wood" instance=ExtResource("1_8japv")]
-collision_mask = 3
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_6yler")
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(-2.38419e-07, -0.5)
+position = Vector2(-2.38419e-07, -0.149997)
 scale = Vector2(0.4, 0.4)
 shape = SubResource("RectangleShape2D_y6so2")

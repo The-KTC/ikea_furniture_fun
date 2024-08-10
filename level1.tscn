@@ -7,8 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cjmsaeiwc0xwa" path="res://bretie_brett_2.tscn" id="6_ytwb3"]
 [ext_resource type="PackedScene" uid="uid://dg7hgmofu7a1a" path="res://langes_brett_2.tscn" id="7_ppu6g"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dwnrj"]
-normal = Vector2(0.005, -0.99)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yr3i8"]
 
 [node name="Level1" type="Node2D"]
 
@@ -21,10 +20,6 @@ player = "P2"
 modulate = Color(0, 0, 1, 1)
 position = Vector2(11, 11)
 
-[node name="Nagel" parent="." instance=ExtResource("2_fnhkw")]
-position = Vector2(449, 77)
-disable_mode = 2
-
 [node name="Node" type="Node" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Node"]
@@ -33,29 +28,62 @@ visibility_layer = 16
 z_index = -1
 texture_filter = 2
 texture_repeat = 2
-scale = Vector2(0.901389, 0.901389)
+scale = Vector2(1.802, 1.802)
 texture = ExtResource("1_7fyrc")
 centered = false
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-y_sort_enabled = true
-position = Vector2(674, 4)
-disable_mode = 2
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-light_mask = 2
-visibility_layer = 2
-y_sort_enabled = true
-position = Vector2(-492, 649)
-shape = SubResource("WorldBoundaryShape2D_dwnrj")
-
 [node name="Wood" parent="." instance=ExtResource("4_mbipq")]
-position = Vector2(728, -297)
+position = Vector2(811, 887)
 collision_layer = 3
 
 [node name="langesBrett2" parent="." instance=ExtResource("7_ppu6g")]
-position = Vector2(521, 483)
+position = Vector2(2039, 953)
+
+[node name="langesBrett5" parent="." instance=ExtResource("7_ppu6g")]
+position = Vector2(2070, 779)
+
+[node name="langesBrett3" parent="." instance=ExtResource("7_ppu6g")]
+position = Vector2(994, 897)
+rotation = 1.58149
+
+[node name="langesBrett4" parent="." instance=ExtResource("7_ppu6g")]
+position = Vector2(610, 892)
+rotation = 1.58149
 
 [node name="bretieBrett2" parent="." instance=ExtResource("6_ytwb3")]
 position = Vector2(505, 70)
+
+[node name="bretieBrett3" parent="." instance=ExtResource("6_ytwb3")]
+position = Vector2(376, -217)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(136, 1298)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_yr3i8")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(136, 1298)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-142, -71)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_yr3i8")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(2452, 1252)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(-142, -71)
+rotation = -15.708
+shape = SubResource("WorldBoundaryShape2D_yr3i8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1154, 647)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Nagel" parent="." instance=ExtResource("2_fnhkw")]
+position = Vector2(148, 967)
+
+[node name="Nagel2" parent="." instance=ExtResource("2_fnhkw")]
+position = Vector2(156, 764)
