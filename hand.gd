@@ -13,6 +13,7 @@ func _process(delta):
 	self.position += velocity * speed
 
 
+
 func _input(event):
 	if event.is_action_pressed(player+"-Up"):
 		velocity+=Vector2(0,-1)
@@ -38,10 +39,12 @@ func _input(event):
 		HandOffset = self.global_position - inHand.global_position
 		inHand.get_parent().remove_child(inHand)
 		self.add_child(inHand)
+		inHand.position = Vector2.ZERO
 	elif event.is_action_pressed(player+"-Auf-UndAblegen") && inHand != null:
 		self.remove_child(inHand)
 		get_parent().add_child(inHand)
 		inHand.OutHand()
+		inHand.position = self.position
 		inHand = null
 
 

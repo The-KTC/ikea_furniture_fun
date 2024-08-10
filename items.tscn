@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gg5hb"]
 size = Vector2(257, 68)
 
-[node name="Items" type="RigidBody2D"]
+[node name="Items" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_de2ti")
