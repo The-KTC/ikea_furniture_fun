@@ -1,22 +1,15 @@
 extends RigidBody2D
 var gravity = 1
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	# if abfrage - worldboarder erreicht?
-	# x-achse wird verringert
-	pass
+var states = null
 
 func InHand():
 	self.gravity_scale = 0
-	self.position.x = 0
-	print("Gravity switched?")
 
-func OutHand():
-	self.gravity_scale = 1
-	print("Gravity switched?")
+func OutHand(vec):
+	if states != null:
+		self.gravity_scale = 1
+		states.transform.origin = vec
+
+
+func _integrate_forces(state):
+	states = state
