@@ -5,6 +5,11 @@ var velocity = Vector2.ZERO
 var inHand = null # werkzeug
 var hatInHand = false
 
+func _ready():
+	get_node("Label").set_text(player)
+	if player == "P1":
+		get_node("Sprite2D").flip_h = true
+
 func _process(delta):
 	self.position += velocity * speed
 	if hatInHand:

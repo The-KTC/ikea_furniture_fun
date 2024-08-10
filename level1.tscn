@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ci0oflngiymbc"]
+[gd_scene load_steps=6 format=3 uid="uid://ci0oflngiymbc"]
 
 [ext_resource type="Texture2D" uid="uid://c0yvqo62mdn1" path="res://UI/level1.png" id="1_7fyrc"]
 [ext_resource type="PackedScene" uid="uid://vua825pr3fsj" path="res://nagel.tscn" id="2_fnhkw"]
 [ext_resource type="PackedScene" uid="uid://d4bohhn7dd7wq" path="res://hand.tscn" id="2_l44ch"]
+[ext_resource type="PackedScene" uid="uid://08myf1y7t4mk" path="res://wood.tscn" id="4_mbipq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dwnrj"]
 normal = Vector2(0.005, -0.99)
@@ -17,7 +18,6 @@ player = "P2"
 [node name="Hand" parent="." instance=ExtResource("2_l44ch")]
 modulate = Color(0, 0, 1, 1)
 position = Vector2(11, 11)
-scale = Vector2(-1, 1)
 
 [node name="Nagel" parent="." instance=ExtResource("2_fnhkw")]
 position = Vector2(449, 77)
@@ -39,7 +39,6 @@ centered = false
 y_sort_enabled = true
 position = Vector2(674, 4)
 disable_mode = 2
-collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -48,3 +47,8 @@ visibility_layer = 2
 y_sort_enabled = true
 position = Vector2(-492, 649)
 shape = SubResource("WorldBoundaryShape2D_dwnrj")
+
+[node name="Wood" parent="." instance=ExtResource("4_mbipq")]
+position = Vector2(728, -297)
+collision_layer = 3
+collision_mask = 3

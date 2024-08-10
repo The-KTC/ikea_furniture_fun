@@ -1,17 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://vua825pr3fsj"]
+[gd_scene load_steps=3 format=3 uid="uid://vua825pr3fsj"]
 
-[ext_resource type="PackedScene" uid="uid://kb62dt0xx8qy" path="res://items.tscn" id="1_2sb16"]
-[ext_resource type="Texture2D" uid="uid://bjb72bftlfj0m" path="res://UI/nagel.png" id="1_bes1l"]
+[ext_resource type="Script" path="res://items.gd" id="1_bdec0"]
+[ext_resource type="Texture2D" uid="uid://b4taj1dw3nv0v" path="res://sprites/Schraube.png" id="3_d1rh8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m32v4"]
-size = Vector2(156, 185.5)
+[node name="Nagel" type="RigidBody2D"]
+collision_layer = 2
+script = ExtResource("1_bdec0")
 
-[node name="Nagel" instance=ExtResource("1_2sb16")]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_d1rh8")
 
-[node name="Sprite2D" parent="." index="0"]
-position = Vector2(4, 0)
-texture = ExtResource("1_bes1l")
-
-[node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(4, 0.25)
-shape = SubResource("RectangleShape2D_m32v4")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-125, 119, -25, -60, -25, -121, 26, -125, 124, -48, 119, -6, 54, 8)
