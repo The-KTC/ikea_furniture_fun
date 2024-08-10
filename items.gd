@@ -1,20 +1,22 @@
-extends CharacterBody2D
-var gravity = 100
-var fall = true
+extends RigidBody2D
+var gravity = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor() && fall:
-		velocity.y += gravity * delta
-		move_and_slide()
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	# if abfrage - worldboarder erreicht?
+	# x-achse wird verringert
+	pass
 
 func InHand():
-	fall = false
+	self.gravity_scale = 0
+	self.position.x = 0
+	print("Gravity switched?")
 
 func OutHand():
-	fall = true
-
+	self.gravity_scale = 1
+	print("Gravity switched?")
