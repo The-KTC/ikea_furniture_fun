@@ -25,6 +25,7 @@ offset_left = 418.0
 offset_top = 143.0
 offset_right = 760.0
 offset_bottom = 221.0
+disabled = true
 text = "Level 2"
 
 [node name="Button3" type="Button" parent="Node"]
@@ -32,6 +33,7 @@ offset_left = 418.0
 offset_top = 241.0
 offset_right = 760.0
 offset_bottom = 319.0
+disabled = true
 text = "Level 3"
 
 [node name="Button4" type="Button" parent="Node"]
@@ -39,6 +41,7 @@ offset_left = 418.0
 offset_top = 336.0
 offset_right = 760.0
 offset_bottom = 414.0
+disabled = true
 text = "Level 4"
 
 [node name="Button5" type="Button" parent="Node"]
@@ -46,6 +49,7 @@ offset_left = 418.0
 offset_top = 433.0
 offset_right = 760.0
 offset_bottom = 511.0
+disabled = true
 text = "Level 5"
 
 [node name="back" type="Button" parent="Node"]

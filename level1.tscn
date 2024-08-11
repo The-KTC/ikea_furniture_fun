@@ -21,7 +21,7 @@ player = "P2"
 
 [node name="Hand" parent="." instance=ExtResource("2_l44ch")]
 modulate = Color(0, 0, 1, 1)
-position = Vector2(11, 11)
+position = Vector2(208, 557)
 
 [node name="Node" type="Node" parent="."]
 
