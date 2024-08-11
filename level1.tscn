@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ci0oflngiymbc"]
+[gd_scene load_steps=9 format=3 uid="uid://ci0oflngiymbc"]
 
 [ext_resource type="Texture2D" uid="uid://c0yvqo62mdn1" path="res://UI/level1.png" id="1_7fyrc"]
 [ext_resource type="PackedScene" uid="uid://vua825pr3fsj" path="res://nagel.tscn" id="2_fnhkw"]
 [ext_resource type="PackedScene" uid="uid://d4bohhn7dd7wq" path="res://hand.tscn" id="2_l44ch"]
 [ext_resource type="PackedScene" uid="uid://08myf1y7t4mk" path="res://wood.tscn" id="4_mbipq"]
 [ext_resource type="PackedScene" uid="uid://cjmsaeiwc0xwa" path="res://bretie_brett_2.tscn" id="6_ytwb3"]
+[ext_resource type="Script" path="res://zeit.gd" id="7_8a1bt"]
 [ext_resource type="PackedScene" uid="uid://dg7hgmofu7a1a" path="res://langes_brett_2.tscn" id="7_ppu6g"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yr3i8"]
@@ -95,3 +96,23 @@ position = Vector2(148, 967)
 
 [node name="Nagel2" parent="." instance=ExtResource("2_fnhkw")]
 position = Vector2(156, 764)
+
+[node name="Zeitangabe" type="Node2D" parent="."]
+position = Vector2(1842, 20)
+scale = Vector2(3.637, 3.637)
+script = ExtResource("7_8a1bt")
+
+[node name="Label" type="Label" parent="Zeitangabe"]
+offset_left = -28.87
+offset_right = 18.13
+offset_bottom = 23.0
+text = "Time: "
+
+[node name="Timer" type="Timer" parent="Zeitangabe"]
+
+[node name="bestTime" type="Label" parent="Zeitangabe"]
+offset_left = -29.1449
+offset_top = 25.2956
+offset_right = 52.8551
+offset_bottom = 48.2956
+text = "Best time: "
