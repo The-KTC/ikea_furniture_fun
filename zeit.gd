@@ -3,14 +3,16 @@ var zeit = 0.0
 var label = null
 var bestTime = null
 var besteZeit = 0.0
+#var zeitLaeuft = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	label = get_node("Label")
 	bestTime = get_node("bestTime")
 	ladeZeit()
-	$Timer.start()
+	#$Timer.start()
 	
 func _process(delta):
+#	if zeitLaeuft:
 	zeit += delta
 	label.text ="Time: "+ String("%.2f" % zeit)
 	bestTime.text ="Best time: "+ String("%.2f" % besteZeit)
@@ -41,5 +43,6 @@ func resetteZeit():
 		besteZeit = 0.0
 	else:
 		print("Datei existiert nicht.")
-
-
+		
+#func flipfloptime():
+#	zeitLaeuft = !zeitLaeuft

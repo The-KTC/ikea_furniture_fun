@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ci0oflngiymbc"]
+[gd_scene load_steps=11 format=3 uid="uid://ci0oflngiymbc"]
 
 [ext_resource type="Texture2D" uid="uid://c0yvqo62mdn1" path="res://UI/level1.png" id="1_7fyrc"]
 [ext_resource type="PackedScene" uid="uid://vua825pr3fsj" path="res://nagel.tscn" id="2_fnhkw"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cjmsaeiwc0xwa" path="res://bretie_brett_2.tscn" id="6_ytwb3"]
 [ext_resource type="Script" path="res://zeit.gd" id="7_8a1bt"]
 [ext_resource type="PackedScene" uid="uid://dg7hgmofu7a1a" path="res://langes_brett_2.tscn" id="7_ppu6g"]
+[ext_resource type="Script" path="res://Settings.gd" id="8_hnnc4"]
+[ext_resource type="Texture2D" uid="uid://bnfd1f1r6f85" path="res://UI/background.png" id="9_si1x6"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yr3i8"]
 
@@ -116,3 +118,44 @@ offset_top = 25.2956
 offset_right = 52.8551
 offset_bottom = 48.2956
 text = "Best time: "
+
+[node name="Settings" type="Node2D" parent="."]
+visible = false
+script = ExtResource("8_hnnc4")
+
+[node name="Menu" type="Button" parent="Settings"]
+z_index = 3
+offset_left = 818.0
+offset_top = 956.0
+offset_right = 976.0
+offset_bottom = 987.0
+scale = Vector2(3.80926, 3.80926)
+text = "Back to Main-menu"
+
+[node name="fortsetzen" type="Button" parent="Settings"]
+z_index = 3
+offset_left = 818.0
+offset_top = 796.0
+offset_right = 976.0
+offset_bottom = 827.0
+scale = Vector2(3.80926, 3.80926)
+text = "Resume"
+
+[node name="Paused" type="Label" parent="Settings"]
+z_index = 3
+offset_left = 648.0
+offset_top = 116.0
+offset_right = 710.0
+offset_bottom = 139.0
+scale = Vector2(16.1112, 16.1112)
+text = "PAUSED"
+
+[node name="Sprite2D" type="Sprite2D" parent="Settings"]
+modulate = Color(0, 0, 0, 0.831373)
+z_index = 2
+position = Vector2(1160, 680)
+scale = Vector2(2.04365, 2.2102)
+texture = ExtResource("9_si1x6")
+
+[connection signal="pressed" from="Settings/Menu" to="Settings" method="_on_menu_pressed"]
+[connection signal="pressed" from="Settings/fortsetzen" to="Settings" method="_on_fortsetzen_pressed"]
